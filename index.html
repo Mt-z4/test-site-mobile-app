@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacilityMaster - Soluções em Facilities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter']">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-[#003087] text-2xl font-bold">FacilityMaster</a>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-xl mx-8">
+                    <div class="relative w-full">
+                        <input type="text" 
+                               placeholder="O que você precisa?" 
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#003087]">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#003087]">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Date/Time and Icons -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <span class="text-sm text-gray-600">06:05 PM -03, segunda-feira, 23 de junho de 2025</span>
+                    <a href="tel:0800-123-4567" class="text-gray-600 hover:text-[#003087]">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="mailto:contato@facilitymaster.com" class="text-gray-600 hover:text-[#003087]">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <button class="bg-[#003087] hover:bg-[#002066] text-white px-4 py-2 rounded flex items-center">
+                        <i class="fas fa-user mr-2"></i>
+                        <span>Entrar / Cadastre-se</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden mobile-menu-button">
+                    <i class="fas fa-bars text-[#003087] text-2xl"></i>
+                </button>
+            </nav>
+
+            <!-- Main Navigation -->
+            <nav class="hidden md:block border-t">
+                <ul class="flex justify-between py-4">
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Manutenção</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Reparos Elétricos</a></li>
+                                <li><a href="#">Manutenção Predial</a></li>
+                                <li><a href="#">Reforço Estrutural</a></li>
+                                <li><a href="#">Suporte Técnico</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Limpeza</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Limpeza Geral</a></li>
+                                <li><a href="#">Desinfecção</a></li>
+                                <li><a href="#">Tratamento de Pisos</a></li>
+                                <li><a href="#">Coleta de Resíduos</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Segurança</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Monitoramento</a></li>
+                                <li><a href="#">Controle de Acesso</a></li>
+                                <li><a href="#">Treinamento de Equipe</a></li>
+                                <li><a href="#">Sistemas de Alarme</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Gestão</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Administração de Facilities</a></li>
+                                <li><a href="#">Planejamento de Manutenção</a></li>
+                                <li><a href="#">Relatórios de Desempenho</a></li>
+                                <li><a href="#">Consultoria</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Sustentabilidade</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Eficiência Energética</a></li>
+                                <li><a href="#">Gestão de Resíduos</a></li>
+                                <li><a href="#">Projetos Verdes</a></li>
+                                <li><a href="#">Certificações Ambientais</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Contato</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#">Fale Conosco</a></li>
+                                <li><a href="#">Suporte 24/7</a></li>
+                                <li><a href="#">Solicitação de Orçamento</a></li>
+                                <li><a href="#">Localização</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-4 py-3 border-b">
+                <input type="text" 
+                       placeholder="O que você precisa?" 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#003087]">
+            </div>
+            <ul class="py-2">
+                <li class="mobile-menu-item">
+                    <a href="#" class="block px-4 py-2">Manutenção</a>
+                    <ul class="hidden pl-8 bg-gray-50">
+                        <li><a href="#" class="block px-4 py-2">Reparos Elétricos</a></li>
+                        <li><a href="#" class="block px-4 py-2">Manutenção Predial</a></li>
+                        <li><a href="#" class="block px-4 py-2">Reforço Estrutural</a></li>
+                        <li><a href="#" class="block px-4 py-2">Suporte Técnico</a></li>
+                    </ul>
+                </li>
+                <!-- Repeat for other menu items -->
+            </ul>
+            <div class="px-4 py-3 border-t">
+                <button class="w-full bg-[#003087] hover:bg-[#002066] text-white px-4 py-2 rounded flex items-center justify-center">
+                    <i class="fas fa-user mr-2"></i>
+                    <span>Entrar / Cadastre-se</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script src="main.js"></script>
+</body>
+</html>
