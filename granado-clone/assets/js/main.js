@@ -1,5 +1,27 @@
 // Main JavaScript for Power Flash
 
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const isExpanded = mobileMenu.classList.contains('active');
+            mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+        });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
 // IIFE to avoid global scope pollution
 (function() {
     'use strict';
@@ -10,6 +32,106 @@
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
     const productsContainer = document.querySelector('.products-grid');
+    const searchInput = document.querySelector('.search-input');
+    const favoritesCounter = document.querySelector('.favorites-counter');
+    
+    // Initialize favorites from localStorage
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    updateFavoritesCounter();
+
+    // Search functionality
+    if (searchInput) {
+        let searchTimeout;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                if (productsContainer) {
+                    const products = productsContainer.querySelectorAll('.product-card');
+                    products.forEach(product => {
+                        const name = product.querySelector('.product-name').textContent.toLowerCase();
+                        const description = product.querySelector('.product-description')?.textContent.toLowerCase() || '';
+                        const isMatch = name.includes(searchTerm) || description.includes(searchTerm);
+                        product.style.display = isMatch || searchTerm === '' ? 'block' : 'none';
+                    });
+                }
+            }, 300);
+        });
+    }
+
+    // Handle favorites
+    function updateFavoritesCounter() {
+        if (favoritesCounter) {
+            favoritesCounter.textContent = favorites.length;
+            favoritesCounter.classList.toggle('hidden', favorites.length === 0);
+        }
+    }
+
+    function toggleFavorite(productId, button) {
+        const index = favorites.indexOf(productId);
+        const icon = button.querySelector('i');
+
+        if (index === -1) {
+            favorites.push(productId);
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            showNotification('Produto adicionado aos favoritos!');
+        } else {
+            favorites.splice(index, 1);
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            showNotification('Produto removido dos favoritos!');
+        }
+
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        updateFavoritesCounter();
+    }
+
+    // Initialize favorites buttons
+    document.querySelectorAll('.add-to-wishlist').forEach(button => {
+        const productId = button.closest('.product-card')?.dataset.id;
+        if (productId) {
+            const icon = button.querySelector('i');
+            if (favorites.includes(productId)) {
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+            }
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleFavorite(productId, button);
+            });
+        }
+    });
+
+    // Handle category selection from submenu
+    document.querySelectorAll('.submenu-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            const category = new URL(e.target.href).searchParams.get('categoria');
+            if (category) {
+                localStorage.setItem('selectedCategory', category);
+            }
+        });
+    });
+
+    // Apply selected category on products page load
+    if (window.location.pathname.includes('produtos.html')) {
+        const urlCategory = new URL(window.location).searchParams.get('categoria');
+        const savedCategory = localStorage.getItem('selectedCategory');
+        const categoryToApply = urlCategory || savedCategory;
+
+        if (categoryToApply) {
+            const categorySelect = document.querySelector('#category-filter');
+            if (categorySelect) {
+                categorySelect.value = categoryToApply;
+                // Trigger change event to filter products
+                categorySelect.dispatchEvent(new Event('change'));
+            }
+            // Clear saved category after applying
+            if (!urlCategory) {
+                localStorage.removeItem('selectedCategory');
+            }
+        }
+    }
 
     // Function to load products from JSON
     async function loadProducts() {
