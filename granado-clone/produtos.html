@@ -17,12 +17,28 @@
                 <div class="flex items-center space-x-8">
                     <a href="index.html" class="text-3xl font-playfair font-bold text-gray-800">Power Flash</a>
                     <div class="hidden md:flex space-x-6">
-                        <a href="produtos.html" class="text-gray-800 border-b-2 border-moss-green">Produtos</a>
-                        <a href="sobre.html" class="text-gray-600 hover:text-gray-800">Sobre nós</a>
-                        <a href="contato.html" class="text-gray-600 hover:text-gray-800">Contato</a>
+                        <div class="nav-item">
+                            <a href="produtos.html" class="nav-link text-gray-800 border-b-2 border-moss-green">Produtos</a>
+                            <div class="submenu">
+                                <a href="produtos.html?categoria=perfumaria" class="submenu-item">Perfumaria</a>
+                                <a href="produtos.html?categoria=sabonetes" class="submenu-item">Sabonetes</a>
+                                <a href="produtos.html?categoria=casa" class="submenu-item">Casa</a>
+                                <a href="produtos.html?categoria=kits" class="submenu-item">Kits</a>
+                            </div>
+                        </div>
+                        <a href="sobre.html" class="nav-link text-gray-600 hover:text-gray-800">Sobre nós</a>
+                        <a href="contato.html" class="nav-link text-gray-600 hover:text-gray-800">Contato</a>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar produtos..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <a href="favoritos.html" class="favorites-icon text-gray-600 hover:text-gray-800">
+                        <i class="far fa-heart"></i>
+                        <span class="favorites-counter hidden">0</span>
+                    </a>
                     <a href="carrinho.html" class="text-gray-600 hover:text-gray-800 relative">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-counter hidden absolute -top-2 -right-2 bg-old-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
