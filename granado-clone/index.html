@@ -12,24 +12,134 @@
 <body class="font-poppins">
     <!-- Header -->
     <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-4">
-            <nav class="flex items-center justify-between">
-                <div class="flex items-center space-x-8">
-                    <a href="index.html" class="text-3xl font-playfair font-bold text-gray-800">Power Flash</a>
-                    <div class="hidden md:flex space-x-6">
-                        <a href="produtos.html" class="text-gray-600 hover:text-gray-800">Produtos</a>
-                        <a href="sobre.html" class="text-gray-600 hover:text-gray-800">Sobre nós</a>
-                        <a href="contato.html" class="text-gray-600 hover:text-gray-800">Contato</a>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-end items-center space-x-6">
+                    <a href="tel:0800-123-4567" class="text-gray-600 hover:text-gray-800">
+                        <i class="fas fa-phone"></i>
+                        <span>0800-123-4567</span>
+                    </a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded flex items-center">
+                        <i class="fas fa-user mr-2"></i>
+                        <span>Entrar / Cadastre-se</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">Power Flash</a>
+
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <input type="text" 
+                               placeholder="O que sua planta precisa?" 
+                               class="search-input">
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Icons -->
+                    <div class="flex items-center space-x-6">
+                        <a href="tel:0800-123-4567" class="text-gray-600 hover:text-gray-800">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <button class="text-gray-600 hover:text-gray-800">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <a href="carrinho.html" class="text-gray-600 hover:text-gray-800 relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-counter hidden absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                        </a>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <a href="carrinho.html" class="text-gray-600 hover:text-gray-800">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="ml-1">Carrinho</span>
-                    </a>
-                </div>
-            </nav>
+            </div>
         </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <div class="container mx-auto">
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden px-4">
+                    <button class="mobile-menu-button" aria-label="Menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex justify-between items-center py-3 px-4">
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Jardins</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Plantas</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Decoração</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Acessórios</a>
+                        <!-- Submenu -->
+                        <div class="submenu hidden group-hover:block">
+                            <ul>
+                                <li><a href="#">Nutrição</a></li>
+                                <li><a href="#">Vasos</a></li>
+                                <li><a href="#">Enfeites</a></li>
+                                <li class="group/sub">
+                                    <a href="#" class="flex items-center justify-between">
+                                        Cuidados
+                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
+                                    </a>
+                                    <!-- Sub-submenu -->
+                                    <div class="group-hover/sub:block hidden">
+                                        <ul>
+                                            <li><a href="#">Suplementos</a></li>
+                                            <li><a href="#">Irrigadores</a></li>
+                                            <li><a href="#">Adubos</a></li>
+                                            <li><a href="#">Limpeza</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Saúde</a></li>
+                                <li><a href="#">Explorar Tudo</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Ofertas</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Clube Verde</a>
+                    </li>
+                    <li class="group relative">
+                        <a href="#" class="nav-link">Troca Fácil</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu -->
+                <div class="mobile-menu hidden">
+                    <ul class="py-2">
+                        <li><a href="#">Jardins</a></li>
+                        <li><a href="#">Plantas</a></li>
+                        <li><a href="#">Decoração</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Clube Verde</a></li>
+                        <li><a href="#">Troca Fácil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Banner -->
