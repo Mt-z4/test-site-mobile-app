@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Power Flash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-3xl font-playfair font-bold text-gray-800">Power Flash</a>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="produtos.html" class="text-gray-600 hover:text-gray-800">Produtos</a>
+                        <a href="sobre.html" class="text-gray-600 hover:text-gray-800">Sobre nós</a>
+                        <a href="contato.html" class="text-gray-800 border-b-2 border-moss-green">Contato</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="carrinho.html" class="text-gray-600 hover:text-gray-800 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-counter hidden absolute -top-2 -right-2 bg-old-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-playfair font-bold text-center mb-8">Entre em Contato</h1>
+                <p class="text-gray-600 text-center mb-12">
+                    Estamos aqui para ajudar. Preencha o formulário abaixo e entraremos em contato o mais breve possível.
+                </p>
+
+                <!-- Contact Information -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-moss-green text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Telefone</h3>
+                        <p class="text-gray-600">(21) 0800-940-6730</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-moss-green text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">E-mail</h3>
+                        <p class="text-gray-600">contato@granado.com.br</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-moss-green text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Endereço</h3>
+                        <p class="text-gray-600">Rio de Janeiro, RJ</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-moss-green"
+                                    placeholder="Seu nome completo">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">E-mail</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-moss-green"
+                                    placeholder="seu@email.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Assunto</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-moss-green"
+                                placeholder="Assunto da mensagem">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-moss-green"
+                                placeholder="Digite sua mensagem aqui..."></textarea>
+                        </div>
+
+                        <div class="flex items-center">
+                            <input type="checkbox" id="privacy" name="privacy" required
+                                class="w-4 h-4 text-moss-green border-gray-300 rounded focus:ring-moss-green">
+                            <label for="privacy" class="ml-2 text-sm text-gray-600">
+                                Concordo com a <a href="#" class="text-moss-green hover:underline">Política de Privacidade</a>
+                            </label>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-moss-green text-white py-3 rounded-md hover:bg-opacity-90 transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 bg-beige">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-playfair font-bold text-center mb-8">Perguntas Frequentes</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="faq-question w-full flex justify-between items-center">
+                        <span class="font-medium">Como faço para rastrear meu pedido?</span>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        Após a confirmação do envio, você receberá um e-mail com o código de rastreamento. 
+                        Com ele, você pode acompanhar seu pedido através do nosso site ou diretamente no site dos Correios.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="faq-question w-full flex justify-between items-center">
+                        <span class="font-medium">Qual o prazo de entrega?</span>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        O prazo de entrega varia de acordo com a sua localização. 
+                        Em geral, para capitais e regiões metropolitanas, o prazo é de 3 a 5 dias úteis.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <button class="faq-question w-full flex justify-between items-center">
+                        <span class="font-medium">Como funciona a política de trocas?</span>
+                        <i class="fas fa-chevron-down text-gray-500"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        Você tem até 7 dias após o recebimento do produto para solicitar a troca ou devolução. 
+                        O produto deve estar em perfeito estado, sem sinais de uso e na embalagem original.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Institucional</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Nossa História</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Lojas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ajuda</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Como Comprar</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Formas de Pagamento</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Entrega</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Receba nossas novidades e promoções</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 w-full rounded-l text-gray-800">
+                        <button class="bg-gray-700 px-4 py-2 rounded-r hover:bg-gray-600 transition duration-300">
+                            Assinar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
+
+        // Form Submission
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            try {
+                const response = await fetch('/backend/php/contato.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    alert('Mensagem enviada com sucesso!');
+                    e.target.reset();
+                } else {
+                    alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
