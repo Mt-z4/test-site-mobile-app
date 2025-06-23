@@ -1,0 +1,142 @@
+/* Base styles */
+:root {
+    --color-primary: #003087;
+    --color-primary-dark: #002066;
+    --color-hover: #E0E0E0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navigation styles */
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: var(--color-hover);
+    border-radius: 4px;
+    color: var(--color-primary);
+}
+
+/* Submenu styles */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.group:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu ul {
+    padding: 0.5rem 0;
+}
+
+.submenu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.submenu a:hover {
+    background-color: var(--color-hover);
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-menu-item > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-item > a:after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-item.active > a:after {
+    transform: rotate(180deg);
+}
+
+.mobile-menu-item > a:hover {
+    background-color: var(--color-hover);
+}
+
+/* Search input styles */
+input[type="text"] {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(0, 48, 135, 0.1);
+}
+
+/* Button hover effects */
+.mobile-menu-button {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu-item ul {
+        display: none;
+    }
+
+    .mobile-menu-item.active ul {
+        display: block;
+    }
+}
