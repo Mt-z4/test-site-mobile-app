@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Petz Style Navigation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* Custom dropdown animation */
+  .dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .dropdown-menu.show {
+    max-height: 500px; /* enough to show all items */
+  }
+</style>
+</head>
+<body class="bg-white font-sans">
+<header class="shadow-md">
+  <nav class="container mx-auto flex items-center justify-between p-4">
+    <a href="#" class="text-2xl font-bold text-green-700">Power Flash</a>
+    <ul class="hidden md:flex space-x-8">
+      <li class="relative group">
+        <button class="font-semibold text-gray-700 hover:text-green-700 focus:outline-none">Produtos</button>
+        <ul class="dropdown-menu absolute left-0 top-full bg-white shadow-lg rounded-md mt-2 w-48 group-hover:max-h-96 max-h-0 overflow-hidden transition-all duration-300">
+          <li><a href="limpeza-geral.html" class="block px-4 py-2 hover:bg-green-100">Limpeza Geral</a></li>
+          <li><a href="desinfecao.html" class="block px-4 py-2 hover:bg-green-100">Desinfecção</a></li>
+          <li><a href="tratamento-pisos.html" class="block px-4 py-2 hover:bg-green-100">Tratamento de Pisos</a></li>
+          <li><a href="coleta-residuos.html" class="block px-4 py-2 hover:bg-green-100">Coleta de Resíduos</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Promoções</a></li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Serviços</a></li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Contato</a></li>
+    </ul>
+    <button class="md:hidden text-green-700 focus:outline-none" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+  <div class="md:hidden bg-white shadow-lg hidden" id="mobile-menu">
+    <ul class="flex flex-col p-4 space-y-2">
+      <li>
+        <button class="w-full text-left font-semibold text-gray-700 hover:text-green-700 focus:outline-none" id="mobile-products-toggle">Produtos</button>
+        <ul class="pl-4 mt-2 space-y-1 hidden" id="mobile-products-menu">
+          <li><a href="limpeza-geral.html" class="block px-4 py-2 hover:bg-green-100 rounded">Limpeza Geral</a></li>
+          <li><a href="desinfecao.html" class="block px-4 py-2 hover:bg-green-100 rounded">Desinfecção</a></li>
+          <li><a href="tratamento-pisos.html" class="block px-4 py-2 hover:bg-green-100 rounded">Tratamento de Pisos</a></li>
+          <li><a href="coleta-residuos.html" class="block px-4 py-2 hover:bg-green-100 rounded">Coleta de Resíduos</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Promoções</a></li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Serviços</a></li>
+      <li><a href="#" class="font-semibold text-gray-700 hover:text-green-700">Contato</a></li>
+    </ul>
+  </div>
+</header>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileProductsToggle = document.getElementById('mobile-products-toggle');
+  const mobileProductsMenu = document.getElementById('mobile-products-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileProductsToggle.addEventListener('click', () => {
+    mobileProductsMenu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
