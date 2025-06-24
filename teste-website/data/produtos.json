@@ -1,0 +1,162 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Sabonete Vintage Rosa",
+      "description": "Sabonete artesanal com fragrância suave de rosas e pétalas naturais",
+      "price": 29.90,
+      "category": "sabonetes",
+      "image": "https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg",
+      "stock": 100,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Creme Facial Hidratante",
+      "description": "Creme facial com fórmula rica em vitaminas e hidratação profunda",
+      "price": 89.90,
+      "category": "cremes",
+      "image": "https://images.pexels.com/photos/3735149/pexels-photo-3735149.jpeg",
+      "stock": 50,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Perfume Clássico Floral",
+      "description": "Fragrância exclusiva com notas florais e toque amadeirado",
+      "price": 159.90,
+      "category": "perfumes",
+      "image": "https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg",
+      "stock": 30,
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Kit Banho Luxuoso",
+      "description": "Kit completo com sabonete, esponja e sais de banho",
+      "price": 129.90,
+      "category": "kits",
+      "image": "https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg",
+      "stock": 25,
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "Óleo Corporal Nutritivo",
+      "description": "Óleo corporal com blend de óleos essenciais e vitamina E",
+      "price": 79.90,
+      "category": "oleos",
+      "image": "https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg",
+      "stock": 40,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "name": "Sabonete Líquido Lavanda",
+      "description": "Sabonete líquido com fragrância relaxante de lavanda",
+      "price": 39.90,
+      "category": "sabonetes",
+      "image": "https://images.pexels.com/photos/4465831/pexels-photo-4465831.jpeg",
+      "stock": 75,
+      "featured": false
+    },
+    {
+      "id": 7,
+      "name": "Máscara Facial Revitalizante",
+      "description": "Máscara facial com argila verde e extratos naturais",
+      "price": 69.90,
+      "category": "mascaras",
+      "image": "https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg",
+      "stock": 35,
+      "featured": false
+    },
+    {
+      "id": 8,
+      "name": "Água de Colônia Vintage",
+      "description": "Fragrância clássica com notas cítricas e herbais",
+      "price": 119.90,
+      "category": "perfumes",
+      "image": "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
+      "stock": 20,
+      "featured": false
+    },
+    {
+      "id": 9,
+      "name": "Kit Presente Especial",
+      "description": "Kit com produtos selecionados em embalagem premium",
+      "price": 199.90,
+      "category": "kits",
+      "image": "https://images.pexels.com/photos/3765132/pexels-photo-3765132.jpeg",
+      "stock": 15,
+      "featured": true
+    },
+    {
+      "id": 10,
+      "name": "Creme para Mãos",
+      "description": "Creme hidratante para mãos com manteiga de karité",
+      "price": 49.90,
+      "category": "cremes",
+      "image": "https://images.pexels.com/photos/3737594/pexels-photo-3737594.jpeg",
+      "stock": 60,
+      "featured": false
+    },
+    {
+      "id": 11,
+      "name": "Sabonete Artesanal Calendula",
+      "description": "Sabonete natural com extrato de calêndula",
+      "price": 34.90,
+      "category": "sabonetes",
+      "image": "https://images.pexels.com/photos/6621462/pexels-photo-6621462.jpeg",
+      "stock": 45,
+      "featured": false
+    },
+    {
+      "id": 12,
+      "name": "Óleo Essencial Relaxante",
+      "description": "Blend de óleos essenciais para aromaterapia",
+      "price": 59.90,
+      "category": "oleos",
+      "image": "https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg",
+      "stock": 30,
+      "featured": false
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Sabonetes",
+      "slug": "sabonetes",
+      "description": "Sabonetes artesanais e naturais"
+    },
+    {
+      "id": 2,
+      "name": "Cremes",
+      "slug": "cremes",
+      "description": "Cremes hidratantes e tratamentos"
+    },
+    {
+      "id": 3,
+      "name": "Perfumes",
+      "slug": "perfumes",
+      "description": "Fragrâncias exclusivas"
+    },
+    {
+      "id": 4,
+      "name": "Kits",
+      "slug": "kits",
+      "description": "Kits especiais e presentes"
+    },
+    {
+      "id": 5,
+      "name": "Óleos",
+      "slug": "oleos",
+      "description": "Óleos corporais e essenciais"
+    },
+    {
+      "id": 6,
+      "name": "Máscaras",
+      "slug": "mascaras",
+      "description": "Máscaras faciais e tratamentos"
+    }
+  ]
+}
