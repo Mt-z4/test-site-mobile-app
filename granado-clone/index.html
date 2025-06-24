@@ -1,255 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Flash - Produtos de Beleza e Cuidados Pessoais</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teste Website - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="font-poppins">
+<body class="font-poppins bg-soft-yellow text-olive-green">
     <!-- Header -->
     <header class="bg-white shadow-sm">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-end items-center space-x-6">
-                    <a href="tel:0800-123-4567" class="text-gray-600 hover:text-gray-800">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-olive-green text-2xl font-bold">Teste Website</a>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-xl mx-8">
+                    <div class="relative w-full">
+                        <input
+                            type="text"
+                            placeholder="O que você precisa?"
+                            class="w-full px-4 py-2 border border-mint-green rounded-lg focus:outline-none focus:border-olive-green"
+                        />
+                        <button
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-mint-green hover:text-olive-green"
+                        >
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Date/Time and Icons -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <span class="text-sm text-olive-green">Bem-vindo ao Teste Website</span>
+                    <a href="tel:0800-123-4567" class="text-olive-green hover:text-gold">
                         <i class="fas fa-phone"></i>
-                        <span>0800-123-4567</span>
                     </a>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded flex items-center">
+                    <a href="mailto:contato@testewebsite.com" class="text-olive-green hover:text-gold">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <button
+                        class="bg-olive-green hover:bg-olive-green/90 text-white px-4 py-2 rounded flex items-center"
+                    >
                         <i class="fas fa-user mr-2"></i>
                         <span>Entrar / Cadastre-se</span>
                     </button>
                 </div>
-            </div>
-        </div>
 
-        <!-- Main Header -->
-        <div class="main-header">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between">
-                    <!-- Logo -->
-                    <a href="index.html" class="logo">Power Flash</a>
-
-                    <!-- Search Bar -->
-                    <div class="search-container">
-                        <input type="text" 
-                               placeholder="O que sua planta precisa?" 
-                               class="search-input">
-                        <button class="search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-
-                    <!-- Icons -->
-                    <div class="flex items-center space-x-6">
-                        <a href="tel:0800-123-4567" class="text-gray-600 hover:text-gray-800">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <button class="text-gray-600 hover:text-gray-800">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <a href="carrinho.html" class="text-gray-600 hover:text-gray-800 relative">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-counter hidden absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav class="nav-menu">
-            <div class="container mx-auto">
                 <!-- Mobile Menu Button -->
-                <div class="md:hidden px-4">
-                    <button class="mobile-menu-button" aria-label="Menu" aria-expanded="false">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                <button class="md:hidden mobile-menu-button">
+                    <i class="fas fa-bars text-olive-green text-2xl"></i>
+                </button>
+            </nav>
 
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex justify-between items-center py-3 px-4">
+            <!-- Main Navigation -->
+            <nav class="hidden md:block border-t">
+                <ul class="flex justify-between py-4">
                     <li class="group relative">
-                        <a href="#" class="nav-link">Jardins</a>
+                        <a href="produtos.html" class="nav-link">Produtos</a>
                     </li>
                     <li class="group relative">
-                        <a href="#" class="nav-link">Plantas</a>
+                        <a href="sobre.html" class="nav-link">Sobre Nós</a>
                     </li>
                     <li class="group relative">
-                        <a href="#" class="nav-link">Decoração</a>
+                        <a href="contato.html" class="nav-link">Contato</a>
                     </li>
                     <li class="group relative">
-                        <a href="#" class="nav-link">Acessórios</a>
-                        <!-- Submenu -->
-                        <div class="submenu hidden group-hover:block">
-                            <ul>
-                                <li><a href="#">Nutrição</a></li>
-                                <li><a href="#">Vasos</a></li>
-                                <li><a href="#">Enfeites</a></li>
-                                <li class="group/sub">
-                                    <a href="#" class="flex items-center justify-between">
-                                        Cuidados
-                                        <i class="fas fa-chevron-right text-xs ml-2"></i>
-                                    </a>
-                                    <!-- Sub-submenu -->
-                                    <div class="group-hover/sub:block hidden">
-                                        <ul>
-                                            <li><a href="#">Suplementos</a></li>
-                                            <li><a href="#">Irrigadores</a></li>
-                                            <li><a href="#">Adubos</a></li>
-                                            <li><a href="#">Limpeza</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#">Saúde</a></li>
-                                <li><a href="#">Explorar Tudo</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="group relative">
-                        <a href="#" class="nav-link">Ofertas</a>
-                    </li>
-                    <li class="group relative">
-                        <a href="#" class="nav-link">Serviços</a>
-                    </li>
-                    <li class="group relative">
-                        <a href="#" class="nav-link">Clube Verde</a>
-                    </li>
-                    <li class="group relative">
-                        <a href="#" class="nav-link">Troca Fácil</a>
+                        <a href="carrinho.html" class="nav-link">Carrinho</a>
                     </li>
                 </ul>
+            </nav>
+        </div>
 
-                <!-- Mobile Menu -->
-                <div class="mobile-menu hidden">
-                    <ul class="py-2">
-                        <li><a href="#">Jardins</a></li>
-                        <li><a href="#">Plantas</a></li>
-                        <li><a href="#">Decoração</a></li>
-                        <li><a href="#">Acessórios</a></li>
-                        <li><a href="#">Ofertas</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Clube Verde</a></li>
-                        <li><a href="#">Troca Fácil</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <ul class="py-2">
+                <li><a href="produtos.html" class="block px-4 py-2">Produtos</a></li>
+                <li><a href="sobre.html" class="block px-4 py-2">Sobre Nós</a></li>
+                <li><a href="contato.html" class="block px-4 py-2">Contato</a></li>
+                <li><a href="carrinho.html" class="block px-4 py-2">Carrinho</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- Main Banner -->
-    <section class="relative bg-gray-100 h-[500px] overflow-hidden">
-        <div class="container mx-auto px-4 h-full">
-            <div class="flex items-center justify-center h-full">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-6xl font-playfair font-bold text-gray-800 mb-6">
-                        Beleza & Cuidados
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        Produtos de qualidade para seus cuidados diários
-                    </p>
-                    <a href="produtos.html" class="bg-gray-800 text-white px-8 py-3 rounded-md hover:bg-gray-700 transition duration-300">
-                        Explorar Produtos
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-playfair font-bold text-center mb-12">Produtos em Destaque</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="h-64 bg-gray-200"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Sabonete Vintage</h3>
-                        <p class="text-gray-600 mb-4">Fragrância suave e delicada para sua pele</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold">R$ 29,90</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
-                                Adicionar ao Carrinho
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="h-64 bg-gray-200"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Creme Facial</h3>
-                        <p class="text-gray-600 mb-4">Hidratação profunda para sua pele</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold">R$ 59,90</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
-                                Adicionar ao Carrinho
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="h-64 bg-gray-200"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Perfume Clássico</h3>
-                        <p class="text-gray-600 mb-4">Fragrância exclusiva e sofisticada</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold">R$ 149,90</span>
-                            <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
-                                Adicionar ao Carrinho
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="relative bg-soft-yellow h-[500px] overflow-hidden flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-5xl font-playfair font-bold mb-6">Bem-vindo ao Teste Website</h1>
+            <p class="text-xl mb-8">Sua loja online de produtos naturais e vibrantes</p>
+            <a
+                href="produtos.html"
+                class="btn-primary hover:bg-olive-green/90 transition duration-300 px-8 py-3 rounded-md"
+                >Explore nossos produtos</a
+            >
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="footer mt-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Institucional</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">Sobre nós</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Nossa História</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Lojas</a></li>
+                    <h3 class="footer-title">Institucional</h3>
+                    <ul>
+                        <li><a href="sobre.html" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="#" class="footer-link">Nossa História</a></li>
+                        <li><a href="#" class="footer-link">Lojas</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Ajuda</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gray-300">Como Comprar</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Formas de Pagamento</a></li>
-                        <li><a href="#" class="hover:text-gray-300">Entrega</a></li>
+                    <h3 class="footer-title">Ajuda</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Como Comprar</a></li>
+                        <li><a href="#" class="footer-link">Formas de Pagamento</a></li>
+                        <li><a href="#" class="footer-link">Entrega</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <h3 class="footer-title">Redes Sociais</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
-                    <p class="mb-4">Receba nossas novidades e promoções</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 w-full rounded-l text-gray-800">
-                        <button class="bg-gray-700 px-4 py-2 rounded-r hover:bg-gray-600 transition duration-300">
-                            Assinar
-                        </button>
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p>Receba nossas novidades e promoções</p>
+                    <form>
+                        <input
+                            type="email"
+                            placeholder="Seu e-mail"
+                            class="form-input mt-2 mb-4"
+                            required
+                        />
+                        <button type="submit" class="btn-primary">Assinar</button>
                     </form>
                 </div>
             </div>
