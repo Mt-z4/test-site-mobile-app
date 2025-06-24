@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Power Flash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="text-3xl font-playfair font-bold text-gray-800">Power Flash</a>
+                    <div class="hidden md:flex space-x-6">
+                        <div class="nav-item">
+                            <a href="produtos.html" class="nav-link text-gray-600 hover:text-gray-800">Produtos</a>
+                            <div class="submenu">
+                                <a href="produtos.html?categoria=perfumaria" class="submenu-item">Perfumaria</a>
+                                <a href="produtos.html?categoria=sabonetes" class="submenu-item">Sabonetes</a>
+                                <a href="produtos.html?categoria=casa" class="submenu-item">Casa</a>
+                                <a href="produtos.html?categoria=kits" class="submenu-item">Kits</a>
+                            </div>
+                        </div>
+                        <a href="sobre.html" class="nav-link text-gray-600 hover:text-gray-800">Sobre nós</a>
+                        <a href="contato.html" class="nav-link text-gray-600 hover:text-gray-800">Contato</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="search-container">
+                        <input type="text" placeholder="Buscar produtos..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <a href="favoritos.html" class="favorites-icon text-gray-600 hover:text-gray-800">
+                        <i class="far fa-heart"></i>
+                        <span class="favorites-counter hidden">0</span>
+                    </a>
+                    <a href="carrinho.html" class="text-gray-800 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-counter hidden absolute -top-2 -right-2 bg-old-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-playfair font-bold mb-8">Seu Carrinho</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Cart Items -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <!-- Cart Items Container -->
+                        <div class="cart-items space-y-4">
+                            <!-- Cart items will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-xl font-semibold mb-4">Resumo do Pedido</h2>
+                        
+                        <!-- Subtotal -->
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span class="cart-subtotal font-medium">R$ 0,00</span>
+                        </div>
+
+                        <!-- Shipping -->
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-600">Frete</span>
+                            <span class="shipping-cost font-medium">Grátis</span>
+                        </div>
+
+                        <!-- Discount -->
+                        <div class="mb-4">
+                            <div class="flex items-center space-x-2">
+                                <input type="text" placeholder="Cupom de desconto" 
+                                       class="flex-1 px-4 py-2 border rounded focus:outline-none focus:border-moss-green">
+                                <button class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
+                                    Aplicar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="border-t pt-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-semibold">Total</span>
+                                <span class="cart-total text-xl font-bold">R$ 0,00</span>
+                            </div>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <button class="checkout-button w-full bg-moss-green text-white py-3 rounded-md hover:bg-opacity-90 transition duration-300 flex items-center justify-center space-x-2">
+                            <span>Finalizar Compra</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                        <!-- Continue Shopping -->
+                        <a href="produtos.html" class="block text-center mt-4 text-gray-600 hover:text-gray-800">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            Continuar Comprando
+                        </a>
+                    </div>
+
+                    <!-- Secure Payment Info -->
+                    <div class="mt-6 bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold mb-4">Pagamento Seguro</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-lock text-gray-600"></i>
+                                <span class="text-sm text-gray-600">Ambiente seguro e criptografado</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-credit-card text-gray-600"></i>
+                                <span class="text-sm text-gray-600">Aceitamos todas as bandeiras</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-truck text-gray-600"></i>
+                                <span class="text-sm text-gray-600">Frete grátis acima de R$ 250,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Institucional</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Nossa História</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Lojas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ajuda</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300">Como Comprar</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Formas de Pagamento</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Entrega</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Redes Sociais</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Receba nossas novidades e promoções</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 w-full rounded-l text-gray-800">
+                        <button class="bg-gray-700 px-4 py-2 rounded-r hover:bg-gray-600 transition duration-300">
+                            Assinar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carrinho.js"></script>
+</body>
+</html>
