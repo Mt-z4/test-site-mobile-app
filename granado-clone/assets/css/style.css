@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --color-beige: #F5F5DC;
-    --color-moss-green: #8A9A5B;
-    --color-old-pink: #DEA5A4;
-    --color-dark: #333333;
+    --color-olive-green: #708238;
+    --color-mint-green: #A8D5BA;
+    --color-soft-yellow: #FFF9D9;
+    --color-white: #FFFFFF;
+    --color-gold: #D4AF37;
+    --color-dark: #4B4B2F;
     --color-light: #F9F9F9;
-    --color-primary: #FFC107;
-    --color-secondary: #1a73e8;
-    --color-hover: #f8f9fa;
+    --color-primary: var(--color-olive-green);
+    --color-secondary: var(--color-gold);
+    --color-hover: var(--color-soft-yellow);
 }
 
 /* Typography */
@@ -32,21 +34,21 @@
 
 /* Custom Components */
 .btn-primary {
-    background-color: var(--color-moss-green);
-    color: white;
+    background-color: var(--color-olive-green);
+    color: var(--color-white);
     padding: 0.75rem 1.5rem;
     border-radius: 0.375rem;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #7A8A4B;
+    background-color: #5a6b2f;
 }
 
 /* Featured Badge */
 .featured-badge {
-    background-color: var(--color-old-pink);
-    color: white;
+    background-color: var(--color-mint-green);
+    color: var(--color-olive-green);
     padding: 0.25rem 0.75rem;
     border-radius: 0.25rem;
     font-size: 0.75rem;
@@ -64,7 +66,7 @@
 
 /* Product Cards */
 .product-card {
-    background: var(--color-light);
+    background: var(--color-white);
     border-radius: 0.5rem;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -72,7 +74,7 @@
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(112, 130, 56, 0.3);
 }
 
 .product-card img {
@@ -97,19 +99,7 @@
 
 .add-to-wishlist:hover i {
     transform: scale(1.2);
-    color: var(--color-old-pink);
-}
-
-/* Featured Badge */
-.featured-badge {
-    background-color: var(--color-old-pink);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+    color: var(--color-mint-green);
 }
 
 /* Product Grid */
@@ -143,13 +133,13 @@
 
 /* Banner Styles */
 .banner {
-    background-color: var(--color-beige);
+    background-color: var(--color-soft-yellow);
     padding: 4rem 0;
     text-align: center;
 }
 
 .banner h1 {
-    color: var(--color-dark);
+    color: var(--color-olive-green);
     font-size: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -165,14 +155,14 @@
 }
 
 .nav-link:hover {
-    color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* Top bar styles */
 .top-bar {
     border-bottom: 1px solid #e5e7eb;
     padding: 0.75rem 0;
-    background-color: white;
+    background-color: var(--color-white);
 }
 
 .top-bar a, .top-bar button {
@@ -185,7 +175,7 @@
 /* Main header styles */
 .main-header {
     padding: 1.25rem 0;
-    background-color: white;
+    background-color: var(--color-white);
 }
 
 /* Logo styles */
@@ -213,7 +203,7 @@
     width: 100%;
     padding: 0.875rem 1rem;
     padding-right: 3rem;
-    border: 2px solid #e5e7eb;
+    border: 2px solid var(--color-mint-green);
     border-radius: 0.5rem;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -221,7 +211,7 @@
 
 .search-input:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    box-shadow: 0 0 0 3px rgba(112, 130, 56, 0.2);
 }
 
 /* Search button */
@@ -232,7 +222,7 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #9ca3af;
+    color: var(--color-mint-green);
     transition: all 0.3s ease;
 }
 
@@ -266,7 +256,7 @@
 /* Mobile menu */
 .mobile-menu {
     display: none;
-    background-color: white;
+    background-color: var(--color-white);
     padding: 0;
     border-top: 1px solid #e5e7eb;
     transform: translateY(-10px);
@@ -407,8 +397,8 @@
     padding: 0.5rem 0;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
-    background: white;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background: var(--color-white);
+    box-shadow: 0 4px 6px -1px rgba(112, 130, 56, 0.1), 0 2px 4px -1px rgba(112, 130, 56, 0.06);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
@@ -431,8 +421,8 @@
 }
 
 .submenu a:hover {
-    background-color: #fce7f3;
-    color: var(--color-secondary);
+    background-color: var(--color-soft-yellow);
+    color: var(--color-primary);
 }
 
 /* Sub-submenu enhancements */
@@ -446,10 +436,10 @@
     left: 100%;
     top: 0;
     min-width: 200px;
-    background: white;
+    background: var(--color-white);
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(112, 130, 56, 0.1), 0 2px 4px -1px rgba(112, 130, 56, 0.06);
 }
 
 .group\/sub:hover .group-hover\/sub\:block {
@@ -473,10 +463,10 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
+    background: var(--color-white);
     min-width: 200px;
     border-radius: 0.375rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(112, 130, 56, 0.1), 0 2px 4px -1px rgba(112, 130, 56, 0.06);
     z-index: 50;
 }
 
@@ -488,14 +478,14 @@
 }
 
 .submenu a:hover {
-    background-color: #fce7f3;
-    color: var(--color-secondary);
+    background-color: var(--color-soft-yellow);
+    color: var(--color-primary);
 }
 
 /* Mobile menu styles */
 .mobile-menu {
     transition: all 0.3s ease-in-out;
-    background-color: white;
+    background-color: var(--color-white);
 }
 
 .mobile-menu.active {
@@ -511,7 +501,8 @@
 
 .mobile-menu a:hover {
     background-color: var(--color-hover);
-    color: var(--color-secondary);
+    color: var(--color-primary);
+    padding-left: 2rem;
 }
 
 /* Search bar styles */
@@ -519,7 +510,7 @@
     width: 100%;
     padding: 0.75rem 1rem;
     padding-right: 2.5rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--color-mint-green);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     font-size: 0.875rem;
@@ -528,7 +519,7 @@
 .search-input:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.2);
+    box-shadow: 0 0 0 2px rgba(112, 130, 56, 0.2);
 }
 
 /* Logo styles */
@@ -552,8 +543,8 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: var(--color-old-pink);
-    color: white;
+    background-color: var(--color-mint-green);
+    color: var(--color-olive-green);
     border-radius: 50%;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
@@ -565,31 +556,31 @@
 .form-input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-mint-green);
     border-radius: 0.375rem;
     transition: border-color 0.3s ease;
 }
 
 .form-input:focus {
     outline: none;
-    border-color: var(--color-moss-green);
+    border-color: var(--color-olive-green);
 }
 
 /* Footer Styles */
 .footer {
-    background-color: var(--color-dark);
-    color: white;
+    background-color: var(--color-soft-yellow);
+    color: var(--color-olive-green);
     padding: 4rem 0;
 }
 
 .footer-title {
-    color: var(--color-beige);
+    color: var(--color-olive-green);
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
 .footer-link {
-    color: #fff;
+    color: var(--color-olive-green);
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
@@ -611,8 +602,8 @@
 
 /* Cart Badge */
 .cart-badge {
-    background-color: var(--color-old-pink);
-    color: white;
+    background-color: var(--color-mint-green);
+    color: var(--color-olive-green);
     border-radius: 50%;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
@@ -622,22 +613,34 @@
 }
 
 /* Custom Utility Classes */
-.text-moss-green {
-    color: var(--color-moss-green);
+.text-olive-green {
+    color: var(--color-olive-green);
 }
 
-.bg-moss-green {
-    background-color: var(--color-moss-green);
+.bg-olive-green {
+    background-color: var(--color-olive-green);
 }
 
-.text-old-pink {
-    color: var(--color-old-pink);
+.text-mint-green {
+    color: var(--color-mint-green);
 }
 
-.bg-old-pink {
-    background-color: var(--color-old-pink);
+.bg-mint-green {
+    background-color: var(--color-mint-green);
 }
 
-.bg-beige {
-    background-color: var(--color-beige);
+.bg-soft-yellow {
+    background-color: var(--color-soft-yellow);
+}
+
+.text-soft-yellow {
+    color: var(--color-soft-yellow);
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.bg-gold {
+    background-color: var(--color-gold);
 }
