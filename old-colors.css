@@ -1,0 +1,42 @@
+:root {
+  --primary-color: #c3b299; /* tom dourado/bege clássico */
+  --secondary-color: #4f3222; /* marrom escuro elegante */
+  --background-color: #f5f0e8; /* tom de fundo claro */
+  --text-color: #2e2e2e; /* texto escuro para boa leitura */
+  --accent-color: #8a6d3b; /* detalhes em tom bronze/dourado */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Georgia', serif;
+}
+
+a, .btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+a:hover, .btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+.header, .footer {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Heart favorite icon styles */
+.favorite-heart {
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favorite-heart.favorited {
+  color: red;
+}
+
+.favorite-heart:hover {
+  color: var(--primary-color);
+}
